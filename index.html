@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="The Cookie Factory is an Unreal Engine game about speed, sugar, and suspiciously powerful bakery machinery."
+    />
+    <meta property="og:title" content="The Cookie Factory" />
+    <meta
+      property="og:description"
+      content="A modern game page for The Cookie Factory, ready for a playable Unreal Engine build."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/cookie-factory-hero.png" />
+    <title>The Cookie Factory</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="The Cookie Factory home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>The Cookie Factory</span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="#media">Media</a>
+        <a href="#download">Play</a>
+        <a href="#updates">Updates</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-art"
+          src="assets/cookie-factory-hero.png"
+          alt="Stylized cookie factory with glowing machinery and cookies moving on conveyor belts"
+        />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Unreal Engine game</p>
+          <h1 id="hero-title">The Cookie Factory</h1>
+          <p class="hero-copy">
+            Dash through a chaotic bakery floor, keep the machines alive, and
+            turn raw dough into a high-score storm.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#download">
+              <span aria-hidden="true">&darr;</span>
+              Get the build
+            </a>
+            <a class="button ghost" href="#media">View media</a>
+          </div>
+        </div>
+        <aside class="status-strip" aria-label="Game status">
+          <span>Build slot ready</span>
+          <span>Windows</span>
+          <span>GitHub Pages</span>
+        </aside>
+      </section>
+
+      <section class="section intro" aria-labelledby="intro-title">
+        <div>
+          <p class="eyebrow">Factory run</p>
+          <h2 id="intro-title">Fast, noisy, sweet, and a little dangerous.</h2>
+        </div>
+        <p>
+          This page is prepared for the game package you will send next. Once
+          the build is added, the download button can point straight to the
+          playable file while the rest of the site stays live on GitHub Pages.
+        </p>
+      </section>
+
+      <section class="section feature-grid" aria-label="Game highlights">
+        <article class="feature">
+          <span class="feature-icon" aria-hidden="true">&#9881;</span>
+          <h3>Factory Pressure</h3>
+          <p>Keep production moving while the bakery gets faster and messier.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon" aria-hidden="true">&#9733;</span>
+          <h3>Score Chase</h3>
+          <p>Stack clean runs, risky saves, and late-stage combo moments.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon" aria-hidden="true">&#9675;</span>
+          <h3>Polished Feel</h3>
+          <p>A bold site wrapper ready for trailers, screenshots, and updates.</p>
+        </article>
+      </section>
+
+      <section class="section media-section" id="media" aria-labelledby="media-title">
+        <div class="section-heading">
+          <p class="eyebrow">Media</p>
+          <h2 id="media-title">Screenshots will land here.</h2>
+        </div>
+        <div class="media-grid">
+          <figure class="media-card large">
+            <img src="assets/cookie-factory-hero.png" alt="The Cookie Factory key art" />
+            <figcaption>Key art</figcaption>
+          </figure>
+          <figure class="media-card placeholder">
+            <span aria-hidden="true"></span>
+            <figcaption>Gameplay shot</figcaption>
+          </figure>
+          <figure class="media-card placeholder alt">
+            <span aria-hidden="true"></span>
+            <figcaption>Trailer frame</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section download-section" id="download" aria-labelledby="download-title">
+        <div class="download-copy">
+          <p class="eyebrow">Play</p>
+          <h2 id="download-title">Game build placeholder is ready.</h2>
+          <p>
+            Send the Unreal Engine build when you have it. I can place it in the
+            download slot and update the file size, version, and button target.
+          </p>
+        </div>
+        <div class="download-panel">
+          <div class="build-badge">Build pending</div>
+          <dl>
+            <div>
+              <dt>Platform</dt>
+              <dd>Windows</dd>
+            </div>
+            <div>
+              <dt>Version</dt>
+              <dd data-build-version>Coming soon</dd>
+            </div>
+            <div>
+              <dt>Package</dt>
+              <dd data-build-size>Waiting for upload</dd>
+            </div>
+          </dl>
+          <a class="button primary disabled" data-download-link href="#" aria-disabled="true">
+            <span aria-hidden="true">&#10515;</span>
+            Build coming soon
+          </a>
+        </div>
+      </section>
+
+      <section class="section updates-section" id="updates" aria-labelledby="updates-title">
+        <div class="section-heading">
+          <p class="eyebrow">Updates</p>
+          <h2 id="updates-title">Patch notes</h2>
+        </div>
+        <ol class="timeline" data-patch-notes>
+          <li class="empty-note">
+            <time>Loading</time>
+            <span>Patch notes are loading.</span>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>The Cookie Factory</span>
+      <span class="footer-links">
+        <a href="owner.html">Owner notes</a>
+        <a href="#top">Back to top</a>
+      </span>
+    </footer>
+
+    <script src="data/patch-notes.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
