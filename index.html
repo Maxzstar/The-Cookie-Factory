@@ -812,7 +812,7 @@ textarea:focus {
               <dd data-build-size>Waiting for upload</dd>
             </div>
           </dl>
-          <a class="button primary disabled" data-download-link href="#" aria-disabled="true">
+          <a class="button primary disabled" data-download-link href="#" aria-disabled="true" target="_blank" rel="noopener">
             <span aria-hidden="true">&#10515;</span>
             Build coming soon
           </a>
@@ -881,6 +881,8 @@ const size = document.querySelector("[data-build-size]");
 
 if (build.file) {
   link.href = build.file;
+  link.target = "_blank";
+  link.rel = "noopener";
   link.classList.remove("disabled");
   link.removeAttribute("aria-disabled");
   link.innerHTML = '<span aria-hidden="true">&#10515;</span>Download build';
