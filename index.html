@@ -742,9 +742,9 @@ textarea:focus {
           <h2 id="intro-title">Fast, noisy, sweet, and a little dangerous.</h2>
         </div>
         <p>
-          The first Windows package is connected to the page now, so players can
-          grab the build directly while the site stays simple and fast on GitHub
-          Pages.
+          The Windows package is hosted in the project build folder on Google
+          Drive, so new releases can land there without changing the static
+          site every time.
         </p>
       </section>
 
@@ -792,12 +792,12 @@ textarea:focus {
           <p class="eyebrow">Play</p>
           <h2 id="download-title">First Windows build is ready.</h2>
           <p>
-            Download the packaged Unreal Engine build, unzip it, and launch the
-            game from the Windows folder.
+            Open the Google Drive build folder, download the latest Windows
+            package, unzip it, and launch the game from the Windows folder.
           </p>
         </div>
         <div class="download-panel">
-          <div class="build-badge">Build available</div>
+          <div class="build-badge">Build folder</div>
           <dl>
             <div>
               <dt>Platform</dt>
@@ -845,7 +845,7 @@ textarea:focus {
 window.patchNotes = [
   {
     date: "2026-07-04",
-    version: "",
+    version: "0.1.0",
     title: "First Windows build",
     summary: "The first playable Windows build of The Cookie Factory is now available.",
     changes: [
@@ -870,9 +870,9 @@ window.patchNotes = [
 </script>
 <script>
 const build = {
-  file: "",
-  version: "",
-  size: "",
+  file: "https://drive.google.com/drive/folders/1f6FuFsA9g6jiRVEL17AdRGlx0Rr-iwT5?usp=sharing",
+  version: "0.1.0",
+  size: "Google Drive",
 };
 
 const link = document.querySelector("[data-download-link]");
