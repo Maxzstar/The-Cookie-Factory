@@ -370,6 +370,34 @@ h3 {
   margin-bottom: 1.5rem;
 }
 
+.trailer-section {
+  padding-top: 0;
+}
+
+.trailer-frame {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: #050403;
+  box-shadow: 0 1.5rem 4rem var(--shadow);
+}
+
+.trailer-frame video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: min(70vh, 42rem);
+  object-fit: cover;
+  background: #050403;
+}
+
+.trailer-fallback {
+  display: inline-block;
+  margin: 1rem;
+  color: var(--mint);
+  font-weight: 800;
+}
+
 .media-grid {
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
@@ -701,6 +729,7 @@ textarea:focus {
         <span>The Cookie Factory</span>
       </a>
       <nav class="nav-links" aria-label="Page sections">
+        <a href="#trailer">Trailer</a>
         <a href="#media">Media</a>
         <a href="#download">Play</a>
         <a href="#updates">Updates</a>
@@ -727,7 +756,7 @@ textarea:focus {
               <span aria-hidden="true">&darr;</span>
               Get the build
             </a>
-            <a class="button ghost" href="#media">View media</a>
+            <a class="button ghost" href="#trailer">Watch trailer</a>
           </div>
         </div>
         <aside class="status-strip" aria-label="Game status">
@@ -765,6 +794,19 @@ textarea:focus {
           <h3>Polished Feel</h3>
           <p>A bold site wrapper ready for trailers, screenshots, and updates.</p>
         </article>
+      </section>
+
+      <section class="section trailer-section" id="trailer" aria-labelledby="trailer-title">
+        <div class="section-heading">
+          <p class="eyebrow">Trailer</p>
+          <h2 id="trailer-title">Step inside the factory.</h2>
+        </div>
+        <div class="trailer-frame">
+          <video controls playsinline preload="metadata" poster="assets/factory-floor.jpg">
+            <source src="video/IUISIDAS.mp4" type="video/mp4" />
+            <a class="trailer-fallback" href="video/IUISIDAS.mp4">Download the trailer</a>
+          </video>
+        </div>
       </section>
 
       <section class="section media-section" id="media" aria-labelledby="media-title">
