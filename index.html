@@ -600,6 +600,51 @@ dd {
   color: var(--muted);
 }
 
+.contact-section {
+  padding-top: clamp(1rem, 4vw, 3rem);
+}
+
+.contact-list {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+
+.contact-link {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--line);
+  padding: clamp(1.3rem, 4vw, 2.2rem) 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 6vw, 4.7rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.contact-link span:first-child {
+  overflow-wrap: anywhere;
+}
+
+.contact-link span:last-child {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.contact-link[href]:hover span:last-child {
+  transform: translate(0.2rem, -0.2rem);
+}
+
+.contact-link-disabled {
+  color: rgba(255, 249, 237, 0.72);
+  cursor: default;
+}
+
 .site-footer {
   justify-content: space-between;
   gap: 1rem;
@@ -768,6 +813,12 @@ textarea:focus {
   .timeline li {
     gap: 0.35rem;
   }
+
+  .contact-link {
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    font-size: clamp(1.8rem, 12vw, 3.2rem);
+  }
 }
 
     </style>
@@ -788,6 +839,7 @@ textarea:focus {
         <a href="#media">Media</a>
         <a href="#download">Play</a>
         <a href="#updates">Updates</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
@@ -939,12 +991,30 @@ textarea:focus {
           </li>
         </ol>
       </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Talk to Maxzstar.</h2>
+        </div>
+        <div class="contact-list" aria-label="Contact links">
+          <a class="contact-link" href="mailto:Maxzstar1@outlook.com">
+            <span>Maxzstar1@outlook.com</span>
+            <span aria-hidden="true">&#8599;</span>
+          </a>
+          <span class="contact-link contact-link-disabled" aria-disabled="true">
+            <span>Join our Discord server</span>
+            <span aria-hidden="true">&#8599;</span>
+          </span>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
       <span>The Cookie Factory</span>
       <span class="footer-links">
         <a href="owner.html">Owner notes</a>
+        <a href="#contact">Contact</a>
         <a href="#top">Back to top</a>
       </span>
     </footer>
